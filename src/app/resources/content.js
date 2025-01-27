@@ -1,13 +1,13 @@
-import { InlineCode } from '@/once-ui/components'
+import { InlineCode, LetterFx } from '@/once-ui/components'
 
 const person = {
-  firstName: 'Selene',
-  lastName: 'Yu',
+  firstName: 'Feildrix',
+  lastName: 'Liemdra',
   get name() {
     return `${this.firstName} ${this.lastName}`
   },
-  role: 'Design Engineer',
-  avatar: '/images/avatar.jpg',
+  role: 'Software Engineer',
+  avatar: '/images/fldx.jpg',
   location: 'Asia/Jakarta', // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ['English', 'Bahasa'], // optional: Leave the array empty if you don't want to display languages
 }
@@ -29,22 +29,22 @@ const social = [
   {
     name: 'GitHub',
     icon: 'github',
-    link: 'https://github.com/once-ui-system/nextjs-starter',
+    link: 'https://github.com/feildrixliemdra',
   },
   {
     name: 'LinkedIn',
     icon: 'linkedin',
-    link: 'https://www.linkedin.com/company/once-ui/',
+    link: 'https://www.linkedin.com/in/feildrix-liemdra/',
   },
   {
-    name: 'X',
-    icon: 'x',
-    link: '',
+    name: 'Medium',
+    icon: 'medium',
+    link: 'https://medium.com/@feildrixliemdra',
   },
   {
     name: 'Email',
     icon: 'email',
-    link: 'mailto:example@gmail.com',
+    link: 'mailto:feildrixliemdra@gmail.com',
   },
 ]
 
@@ -52,12 +52,26 @@ const home = {
   label: 'Home',
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: (
+    <>
+      <p>Software Engineer</p>
+      <LetterFx
+        speed='slow'
+        trigger='instant'
+        charset={['X', 'a', 'H', 'z', 'o', '0', 'y', '*', '0', '1']}
+        className='font-xs neutral-on-background-weak font-default'
+      >
+        based in Indonesia 🇮🇩
+      </LetterFx>
+    </>
+  ),
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I
-      craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Feildrix, a <InlineCode>Software Engineer</InlineCode> with a passion
+      for building scalable, user-focused applications and sipping on great
+      coffee. Skilled in front-end and back-end technologies, I blend clean code
+      with creativity to deliver innovative solutions.
+      <br /> one line of code—and one cup of coffee—at a time.
     </>
   ),
 }
@@ -82,10 +96,15 @@ const about = {
     title: 'Introduction',
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for
-        transforming complex challenges into simple, elegant design solutions.
-        Her work spans digital interfaces, interactive experiences, and the
-        convergence of design and technology.
+        Feildrix is a skilled full-stack software engineer with a passion for
+        building robust, scalable, and innovative applications. With expertise
+        spanning both front-end and back-end technologies, Feildrix seamlessly
+        bridges the gap between design and functionality. Whether crafting
+        intuitive user interfaces or architecting efficient server-side
+        solutions, Feildrix consistently delivers high-quality work that meets
+        both user and business needs. Known for a collaborative mindset and a
+        knack for problem-solving, Feildrix thrives in dynamic environments
+        where creativity and technology converge.
       </>
     ),
   },
@@ -94,41 +113,107 @@ const about = {
     title: 'Work Experience',
     experiences: [
       {
-        company: 'FLY',
+        company: 'eFishery',
         timeframe: '2022 - Present',
-        role: 'Senior Design Engineer',
+        role: 'Software Engineer (Backend)',
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20%
-            increase in user engagement and 30% faster load times.
+            Fund Submission Team: Responsible to process and validate Efishery
+            Kabayan (Loan) submission data from farmer
+            <ul>
+              <li>Migrate old database from CouchDB to Postgre</li>
+              <li>
+                Create new service that consume core customer data changes from
+                other service with Rabbitmq
+              </li>
+              <li>Process and validate farmer submission for loan</li>
+              <li>
+                Integrate with OCR service to ensure farmer's uploaded KTP and
+                KK are valid document
+              </li>
+              <li>
+                Collaborate with Product Manager to develop and maintain
+                existing or new feature related to Kabayan submission
+              </li>
+            </ul>
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows,
-            enabling designers to iterate 50% faster.
+            Tech Stack:
+            <ul>
+              <li>Golang</li>
+              <li>PostgreSQL</li>
+              <li>CouchDB</li>
+              <li>Redis</li>
+              <li>RabbitMQ</li>
+              <li>Grafana</li>
+            </ul>
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: '/images/projects/project-01/cover-01.jpg',
-            alt: 'Once UI Project',
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: '/images/projects/project-01/cover-01.jpg',
+          //   alt: 'Once UI Project',
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
       {
-        company: 'Creativ3',
-        timeframe: '2018 - 2022',
-        role: 'Lead Designer',
+        company: 'Ralali',
+        timeframe: '2019 - 2022',
+        role: 'Software Engineer (Backend)',
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple
-            platforms, improving design consistency by 40%.
+            Fintech(Digital Goods) Team: Improve legacy service by building new
+            Digital Goods Aggregator Project based on Aggregator Pattern and
+            Event Driven Architecture.
+            <ul>
+              <li>Create technical documentation for new service</li>
+              <li>
+                Contribute to designing system architecture Develop Digital
+                Product service that focus on product management
+              </li>
+              <li>
+                Develop Digital Aggregator service Develop Bulk Digital service
+                Integrate Ralali marketplace with new digital goods services
+              </li>
+            </ul>
           </>,
           <>
-            Led a cross-functional team to launch a new product line,
-            contributing to a 15% increase in overall company revenue.
+            BIG Agent Team: Focus on developing backend feature for BIG Agent
+            Mobile Apps and Admin Dashboard.
+            <ul>
+              <li>
+                Responsible for reliability and performance of API services
+              </li>
+              <li>Develop and fixing bug in agent core API legacy</li>
+              <li>
+                Develop Learning in app feature service that focus on learning
+                system
+              </li>
+              <li>
+                Develop Questionnaire service that focus on manage questionnaire
+                feature
+              </li>
+              <li>
+                Develop Query service that focus on improving response time for
+                GET request
+              </li>
+              <li>Integrate new Digital Goods Service</li>
+            </ul>
+          </>,
+          <>
+            Tech Stack:
+            <ul>
+              <li>Golang</li>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+              <li>Redis</li>
+              <li>Kafka</li>
+              <li>Datadog</li>
+              <li>ElasticSearch</li>
+            </ul>
           </>,
         ],
         images: [],
@@ -140,12 +225,8 @@ const about = {
     title: 'Studies',
     institutions: [
       {
-        name: 'University of Jakarta',
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: 'Build the Future',
-        description: <>Studied online marketing and personal branding.</>,
+        name: 'Binus University (2016-2020)',
+        description: <>Bachelor of Computer Science</>,
       },
     ],
   },
@@ -154,40 +235,81 @@ const about = {
     title: 'Technical skills',
     skills: [
       {
-        title: 'Figma',
+        title: 'Golang',
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Focus on building high-performance, scalable, and secure server-side
+            systems, from crafting RESTful APIs to optimizing microservices.
+            With a strong problem-solving mindset, I’m passionate about
+            delivering reliable solutions that drive seamless application
+            performance.
+          </>
         ),
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: '/images/projects/project-01/cover-02.jpg',
-            alt: 'Project image',
-            width: 16,
-            height: 9,
-          },
-          {
-            src: '/images/projects/project-01/cover-03.jpg',
-            alt: 'Project image',
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: '/images/projects/project-01/cover-02.jpg',
+          //   alt: 'Project image',
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
       {
-        title: 'Next.js',
+        title: 'NodeJS',
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Proficient in NodeJS with experience in NestJS to develop robust
+            server-side application.
+          </>
         ),
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: '/images/projects/project-01/cover-04.jpg',
-            alt: 'Project image',
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
+      },
+      {
+        title: 'React & NextJS',
+        description: (
+          <>
+            focus on building dynamic, responsive, and high-performance web
+            applications. With a strong eye for detail and user experience, I’m
+            passionate about creating seamless interfaces and delivering modern,
+            scalable solutions.
+          </>
+        ),
+      },
+      {
+        title: 'SQL and NoSQL Database',
+        description: (
+          <>
+            Experience with SQL and NoSQL database to build application that
+            cover user needs. I've been working with MySQL and PosgreSQL for SQL
+            database and MongoDB, Redis for NoSQL database.{' '}
+          </>
+        ),
+      },
+      {
+        title: 'Docker',
+        description: (
+          <>
+            Experienced in Docker, specializing in containerizing applications
+            for streamlined development, deployment, and scalability. I focus on
+            creating efficient, portable environments, optimizing workflows, and
+            ensuring seamless integration across various systems.
+          </>
+        ),
+      },
+      {
+        title: 'Git',
+        description: <>Git for version control. </>,
+      },
+      {
+        title: 'Message Queueing',
+        description: (
+          <>
+            Experienced with Kafka and RabbitMQ for message queueing to build
+            event driven architecture.
+          </>
+        ),
       },
     ],
   },
