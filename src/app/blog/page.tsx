@@ -3,9 +3,8 @@ import { Mailchimp } from '@/components'
 import { Posts } from '@/components/blog/Posts'
 import { baseURL } from '@/app/resources'
 import { blog, person, newsletter } from '@/app/resources/content'
-import Parser from 'rss-parser'
+import getMediumPosts from '../../actions/medium_post'
 
-const parser = new Parser()
 export type MediumPost = {
   title: string
   link: string
@@ -42,28 +41,6 @@ export async function generateMetadata() {
       images: [ogImage],
     },
   }
-}
-
-export async function getMediumPosts(): Promise<MediumPost[]> {
-  const feed = await parser.parseURL('https://medium.com/feed/@feildrixliemdra')
-
-  return feed.items.map((item) => {
-    console.log('title: ', item.title)
-
-    const content = item['content:encoded'] || item.content || '' // HTML content
-    const thumbnailMatch = content.match(/<img.*?src="(.*?)"/) // Match the first image tag
-    const thumbnail = thumbnailMatch ? thumbnailMatch[1] : null
-    const slug = item.link?.split('/').pop() || '' // Extract slug from the URL
-
-    return {
-      title: item.title || '',
-      link: item.link || '',
-      content: item.contentSnippet || '',
-      date: item.pubDate || '',
-      thumbnail: thumbnail || '',
-      slug,
-    }
-  })
 }
 
 export default async function Blog() {

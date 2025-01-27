@@ -16,7 +16,7 @@ import { baseURL, routes } from '@/app/resources'
 import { home, about, person, newsletter } from '@/app/resources/content'
 import { Mailchimp } from '@/components'
 import { Posts } from '@/components/blog/Posts'
-import { getMediumPosts } from './blog/page'
+import getMediumPosts from '../actions/medium_post'
 
 export async function generateMetadata() {
   const title = home.title
