@@ -15,8 +15,6 @@ import { Projects } from '@/components/work/Projects'
 import { baseURL, routes } from '@/app/resources'
 import { home, about, person, newsletter } from '@/app/resources/content'
 import { Mailchimp } from '@/components'
-import { Posts } from '@/components/blog/Posts'
-import getMediumPosts from '../actions/medium_post'
 
 export async function generateMetadata() {
   const title = home.title
@@ -48,7 +46,7 @@ export async function generateMetadata() {
 }
 
 export default async function Home() {
-  const posts = await getMediumPosts()
+  // const posts = await getMediumPosts()
 
   return (
     <Column maxWidth='m' gap='xl' horizontal='center'>
@@ -127,7 +125,7 @@ export default async function Home() {
       <RevealFx translateY='16' delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>
-      {routes['/blog'] && (
+      {/* {routes['/blog'] && (
         <Flex fillWidth gap='24' mobileDirection='column'>
           <Flex flex={1} paddingLeft='l'>
             <Heading as='h2' variant='display-strong-xs' wrap='balance'>
@@ -138,7 +136,7 @@ export default async function Home() {
             <Posts posts={posts} range={[1, 2]} columns='2' />
           </Flex>
         </Flex>
-      )}
+      )} */}
       <Projects range={[2]} />
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
