@@ -1,4 +1,4 @@
-const baseURL = 'fldx.dev'
+const baseURL = 'fldx-dev.vercel.app'
 
 const routes = {
   '/': true,
