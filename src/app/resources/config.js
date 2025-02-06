@@ -3,7 +3,7 @@ const baseURL = 'fldx.dev'
 const routes = {
   '/': true,
   '/about': true,
-  '/work': false,
+  '/work': true,
   '/blog': true,
   '/gallery': false,
 }
