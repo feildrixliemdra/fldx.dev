@@ -1,89 +1,73 @@
-# **Build your portfolio with Once UI's Magic Portfolio**
+# Feildrix Liemdra | Software Engineer
 
-View the [demo here](https://demo.magic-portfolio.com).
+Welcome to my portfolio! I'm a Software Engineer based in Indonesia 🇮🇩, dedicated to building scalable, robust, and user-centric applications. This repository contains the source code for my personal portfolio website, built using Next.js and Once UI.
 
-![Magic Portfolio](public/images/cover.png)
+## 🚀 About Me
 
+I am a full-stack engineer with a depth of experience in backend architecture and high-performance systems. I bridge the gap between complex technical requirements and intuitive user experiences.
 
-# **Getting started**
+- 🔭 **Current Focus**: Fullstack Engineer at **Upthinx**, focusing on building API services and internal dashboards for the Fazza application.
+- ⚡ **Expertise**: Golang, Node.js (NestJS), React/Next.js, and Event-Driven Architecture.
+- 🏗️ **Infrastructure**: Passionate about IaC with Terraform and containerization with Docker.
+- ☕ **Fun Fact**: Driven by clean code and high-quality coffee.
 
-Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
+## 🛠️ Technical Skills
 
-**1. Clone the repository**
-```
-git clone https://github.com/once-ui-system/magic-portfolio.git
-```
+- **Languages**: Golang, TypeScript, JavaScript, PHP.
+- **Backend**: NestJS, Go, Microservices, RESTful APIs.
+- **Frontend**: React, Next.js, Tailwind CSS, shadcn/ui.
+- **Data & Messaging**: PostgreSQL, MySQL, Redis, MongoDB, Kafka, RabbitMQ.
+- **DevOps**: Terraform, Docker, DigitalOcean, Datadog.
 
-**2. Install dependencies**
-```
-npm install
-```
+## 📁 Key Projects
 
-**3. Run dev server**
-```
-npm run dev
-```
+### [Qlutch: Real-time Padel Scoring](https://qlutch.id)
+Full-stack development of a Padel scoring app.
+- **Role**: Backend & Infrastructure Engineer.
+- **Tech**: NestJS, Postgres, Redis, Terraform, DigitalOcean.
+- **Challenge**: Developing a fair match-generation algorithm for Americano tournaments.
 
-**4. Edit config**
-```
-src/app/resources/config
-```
+### [PLN PBJ Tracking](https://github.com/feildrixliemdra)
+Procurement management system for internal and third-party tracking.
+- **Tech**: Next.js, shadcn/ui, Supabase.
 
-**5. Edit content**
-```
-src/app/resources/content
-```
+### [Ralali Digital Goods](https://github.com/feildrixliemdra)
+Migration of legacy monolith to microservices using event-driven patterns.
+- **Tech**: Go, MySQL, Kafka, Datadog.
 
-**6. Create blog posts / projects**
-```
-Add a new .mdx file to src/app/blog/posts or src/app/work/projects
-```
+## 📊 Work Experience
 
-# **Features**
+- **Upthinx** | Fullstack Engineer | 2025 - Present
+- **eFishery** | Software Engineer (Backend) | 2022 - 2024
+- **Ralali** | Software Engineer (Backend) | 2019 - 2022
 
-## **Once UI**
-- All tokens, components & features of [Once UI](https://once-ui.com)
+## 🛠️ Development Setup
 
-## **SEO**
-- Automatic open-graph and X image generation with next/og
-- Automatic schema and metadata generation based on the content file
+This portfolio was built using the [Once UI Magic Portfolio](https://once-ui.com) template.
 
-## **Design**
-- Responsive layout optimized for all screen sizes
-- Timeless design without heavy animations and motion
-- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
+### Getting Started
 
-## **Content**
-- Render sections conditionally based on the content file
-- Enable or disable pages for blog, work, gallery and about / CV
-- Generate and display social links automatically
-- Set up password protection for URLs
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-## **Localization**
-- A localized version of Magic Portfolio is available with the next-intl library
-- To use localization, switch to the 'i18n' branch
+2. **Run development server**
+   ```bash
+   npm run dev
+   ```
 
-# **Authors**
+3. **Configuration**
+   - Edit personal info: `src/app/resources/content.js`
+   - Edit site settings: `src/app/resources/config.js`
 
-Connect with us on Threads or LinkedIn.
+## 📬 Connect with Me
 
-Lorant Toth: [Threads](https://www.threads.net/@lorant.one), [LinkedIn](https://www.linkedin.com/in/tothlorant/)  
-Zsofia Komaromi: [Threads](https://www.threads.net/@zsofia_kom), [LinkedIn](https://www.linkedin.com/in/zsofiakomaromi/)
+- **LinkedIn**: [feildrix-liemdra](https://www.linkedin.com/in/feildrix-liemdra/)
+- **GitHub**: [@feildrixliemdra](https://github.com/feildrixliemdra)
+- **Email**: [feildrixliemdra@gmail.com](mailto:feildrixliemdra@gmail.com)
+- **Medium**: [@feildrixliemdra](https://medium.com/@feildrixliemdra)
 
-Localization added by [François Hernandez](https://github.com/francoishernandez)
+---
 
-# **Get involved**
-
-- Join the [Design Engineers Club on Discord](https://discord.com/invite/5EyAQ4eNdS) and share your portfolio with us!
-- Report a [bug](https://github.com/once-ui-system/magic-portfolio/issues/new?labels=bug&template=bug_report.md).
-
-# **License**
-
-Distributed under the CC BY-NC 4.0 License.
-- Commercial usage is not allowed.
-- Attribution is required.
-
-See `LICENSE.txt` for more information.
-
-# **Deploy with Vercel**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fcover.png)
+© 2026 Feildrix Liemdra. Built with [Once UI](https://once-ui.com) and [Next.js](https://nextjs.org).

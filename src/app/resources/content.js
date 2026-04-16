@@ -113,8 +113,34 @@ const about = {
     title: 'Work Experience',
     experiences: [
       {
+        company: 'Upthinx',
+        timeframe: '2025 - Present',
+        role: 'Fullstack Engineer',
+        achievements: [
+          <>
+            Contributed to the development of the Fazza application, focusing on building robust API services and a comprehensive internal dashboard.
+            <ul>
+              <li>Developed and maintained core API services to support the Fazza application ecosystem.</li>
+              <li>Designed and implemented a high-performance internal dashboard for streamlined operations.</li>
+              <li>Collaborated on architectural decisions to ensure scalability and reliability.</li>
+            </ul>
+          </>,
+          <>
+            Tech Stack:
+            <ul>
+              <li>Golang</li>
+              <li>PostgreSQL</li>
+              <li>Redis</li>
+              <li>Next.js</li>
+              <li>Shadcn/UI</li>
+            </ul>
+          </>,
+        ],
+        images: [],
+      },
+      {
         company: 'eFishery',
-        timeframe: '2022 - Present',
+        timeframe: '2022 - 2024',
         role: 'Software Engineer (Backend)',
         achievements: [
           <>
