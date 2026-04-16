@@ -1,0 +1,45 @@
+---
+title: 'Qlutch: Real-time Padel Scoring and Player Analytics'
+publishedAt: '2026-04-16'
+summary: 'A high-performance backend and infrastructure for a Padel scoring app, featuring real-time synchronization and detailed player statistics.'
+images:
+  - '/images/projects/qlutch/qlutch-1.png'
+  - '/images/projects/qlutch/qlutch-2.png'
+  - '/images/projects/qlutch/qlutch-3.png'
+team:
+  - name: 'Feildrix Liemdra'
+    role: 'Backend & Infrastructure Engineer'
+    avatar: '/images/avatar_fldx.jpg'
+    linkedIn: 'https://www.linkedin.com/in/feildrix-liemdra/'
+link: 'https://qlutch.id'
+---
+
+## Overview
+
+Qlutch is a specialized scoring application designed for Padel enthusiasts. In this project, I took full responsibility for developing the entire API backend and managing the cloud infrastructure. The app allows users to generate matches, track live scores, and view leaderboards that are synchronized in real-time across all participating players.
+
+Beyond just scoring, Qlutch provides a comprehensive platform for tracking player performance, offering detailed statistics and analytics to help players improve their game over time.
+
+## Key Features
+
+- **Match Generation & Tracking**: Smoothly generate new matches and track real-time scores with high precision.
+- **Synchronized Leaderboard**: A centralized leaderboard that stays in sync for all players, providing a competitive and transparent environment.
+- **Player Analytics**: Automatically records and calculates player statistics, offering insights into win rates and performance trends.
+- **Real-time Notifications**: Integrated push notifications to keep players updated on match invites, score changes, and leaderboard shifts.
+
+## Technologies Used
+
+- **NestJS**: Used to build a scalable and modular backend API with a focus on high performance and maintainability.
+- **PostgreSQL**: Serving as the primary relational database to manage player profiles, match histories, and statistical data.
+- **Redis**: Implementing a fast, in-memory data store for real-time score synchronization and efficient caching.
+- **Firebase**: Powering the push notification system to ensure real-time user engagement.
+- **Terraform (IaC)**: Managing infrastructure through code to ensure consistent, repeatable, and automated environment deployments.
+- **DigitalOcean**: Cloud infrastructure provider chosen for its reliability and developer-friendly scaling options.
+
+## Challenges and Learnings
+
+A key technical challenge was developing the match generation algorithm, particularly for the Americano tournament format. The goal was to ensure maximum fairness: every player must have an equal number of matches and rest periods. Additionally, the sequence had to be optimized to prevent fatigue or disengagement, ensuring no player had to play or rest for too many consecutive rounds.
+
+## Outcome
+
+The backend system is highly responsive and capable of handling complex real-time events without lag. The automation of infrastructure via IaC has made the system robust and easy to scale, while the player analytics feature has become an essential tool for users to measure their growth in the sport.
