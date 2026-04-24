@@ -1,0 +1,2349 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GO Super App — Pitch Narrative</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --black: #0E0E0D;
+      --off-white: #F5F3EE;
+      --cream: #EDE9E1;
+      --accent: #C94B2A;
+      --accent-light: #F0E8E4;
+      --green: #2A6B4B;
+      --green-light: #E3EDE8;
+      --muted: #7A7770;
+      --border: #D8D4CC;
+      --jkt: #C94B2A;
+      --bdg: #2A6B4B;
+      --sby: #1A5FA5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--off-white);
+      color: var(--black);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    /* COVER */
+    .cover {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 56px 64px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #C94B2A18 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cover-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .logo-mark {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      letter-spacing: .02em;
+    }
+
+    .logo-mark .dot-jkt {
+      color: var(--jkt);
+    }
+
+    .logo-mark .dot-bdg {
+      color: var(--bdg);
+    }
+
+    .logo-mark .dot-sby {
+      color: var(--sby);
+    }
+
+    .cover-tag {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--cream);
+      border: 1px solid var(--border);
+      padding: 4px 14px;
+      border-radius: 99px;
+    }
+
+    .jktgo-tag {
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #000000;
+      background: #F7E900;
+      padding: 4px 14px;
+      border-radius: 99px;
+    }
+
+    .cover-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 0 40px;
+    }
+
+    .cover-label {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .cover-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.07;
+      letter-spacing: -.01em;
+      color: var(--black);
+      max-width: 720px;
+      margin-bottom: 32px;
+    }
+
+    .cover-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .cover-sub {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 520px;
+      font-weight: 300;
+      line-height: 1.65;
+    }
+
+    .city-pills {
+      display: flex;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .city-pill {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 5px 14px;
+      border-radius: 99px;
+      border: 1.5px solid;
+    }
+
+    .city-pill.jkt {
+      color: var(--jkt);
+      border-color: var(--jkt);
+      background: var(--accent-light);
+    }
+
+    .city-pill.bdg {
+      color: var(--bdg);
+      border-color: var(--bdg);
+      background: var(--green-light);
+    }
+
+    .city-pill.sby {
+      color: var(--sby);
+      border-color: var(--sby);
+      background: #E6EFF8;
+    }
+
+    .cover-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+    }
+
+    .cover-role {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .cover-role strong {
+      color: var(--black);
+      font-weight: 500;
+    }
+
+    .cover-page {
+      font-size: 12px;
+      color: var(--border);
+      letter-spacing: .08em;
+    }
+
+    /* PAGES */
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 96px 64px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-num {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-num::after {
+      content: '';
+      height: 1px;
+      width: 40px;
+      background: var(--border);
+      display: inline-block;
+    }
+
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.12;
+      letter-spacing: -.01em;
+      margin-bottom: 28px;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .body-text {
+      font-size: 16px;
+      color: #3A3835;
+      line-height: 1.8;
+      max-width: 660px;
+      font-weight: 300;
+    }
+
+    .body-text+.body-text {
+      margin-top: 1.25rem;
+    }
+
+    .body-text strong {
+      font-weight: 500;
+      color: var(--black);
+    }
+
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      padding: 16px 28px;
+      margin: 40px 0;
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      line-height: 1.4;
+      color: var(--black);
+      font-style: italic;
+      max-width: 600px;
+    }
+
+    /* STATS */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 40px 0;
+    }
+
+    .stat-cell {
+      background: var(--off-white);
+      padding: 28px 24px;
+    }
+
+    .stat-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 40px;
+      line-height: 1;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+
+    .stat-lbl {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    /* CITY MULTI */
+    .city-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 40px 0;
+    }
+
+    .city-card {
+      border-radius: 14px;
+      padding: 28px 24px;
+      border: 1px solid var(--border);
+    }
+
+    .city-card.jkt {
+      border-color: #E8B5A6;
+      background: linear-gradient(135deg, #FDF5F3 0%, var(--off-white) 100%);
+    }
+
+    .city-card.bdg {
+      border-color: #A6C8B5;
+      background: linear-gradient(135deg, #F2F8F5 0%, var(--off-white) 100%);
+    }
+
+    .city-card.sby {
+      border-color: #A6BED8;
+      background: linear-gradient(135deg, #F2F6FB 0%, var(--off-white) 100%);
+    }
+
+    .city-card-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    .city-card-brand {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .city-card.jkt .city-card-brand {
+      color: var(--jkt);
+    }
+
+    .city-card.bdg .city-card-brand {
+      color: var(--bdg);
+    }
+
+    .city-card.sby .city-card-brand {
+      color: var(--sby);
+    }
+
+    .city-card-stat {
+      font-family: 'DM Serif Display', serif;
+      font-size: 30px;
+      margin-bottom: 2px;
+    }
+
+    .city-card-statlbl {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .city-card-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 12px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    /* MODULES */
+    .modules-wrap {
+      margin: 40px 0;
+    }
+
+    .module-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 32px;
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .module-item:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .module-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+
+    .module-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 99px;
+      margin-top: 2px;
+    }
+
+    .tag-core {
+      background: var(--green-light);
+      color: var(--green);
+    }
+
+    .tag-rev {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .tag-ai {
+      background: #EDE8FB;
+      color: #4A3A9B;
+    }
+
+    .module-desc {
+      font-size: 15px;
+      color: #3A3835;
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    .module-points {
+      list-style: none;
+      margin-top: 12px;
+    }
+
+    .module-points li {
+      font-size: 14px;
+      color: var(--muted);
+      padding: 3px 0;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .module-points li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 12px;
+    }
+
+    /* ECOSYSTEM DIAGRAM */
+    .eco-diagram {
+      margin: 48px 0;
+    }
+
+    .eco-title {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .diagram-wrap {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* center column - app */
+    .diag-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .diag-app-shell {
+      width: 120px;
+      height: 220px;
+      background: var(--black);
+      border-radius: 22px;
+      padding: 10px 8px;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(14, 14, 13, 0.25);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .diag-app-screen {
+      background: #1A1A18;
+      border-radius: 14px;
+      flex: 1;
+      padding: 8px 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      overflow: hidden;
+    }
+
+    .diag-screen-header {
+      background: var(--accent);
+      border-radius: 6px;
+      height: 16px;
+      opacity: .9;
+    }
+
+    .diag-screen-row {
+      background: #2A2A28;
+      border-radius: 4px;
+      height: 10px;
+      width: 80%;
+    }
+
+    .diag-screen-row.w60 {
+      width: 60%;
+    }
+
+    .diag-screen-row.w90 {
+      width: 90%;
+    }
+
+    .diag-screen-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+      flex: 1;
+    }
+
+    .diag-block-item {
+      border-radius: 4px;
+      background: #333330;
+    }
+
+    .diag-app-notch {
+      width: 30px;
+      height: 4px;
+      background: #333;
+      border-radius: 99px;
+      margin: 0 auto;
+      margin-bottom: 4px;
+    }
+
+    .diag-app-label {
+      font-family: 'DM Serif Display', serif;
+      font-size: 15px;
+      color: var(--black);
+      text-align: center;
+    }
+
+    .diag-app-sub {
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 300;
+    }
+
+    /* full diagram layout */
+    .diag-full {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .diag-left,
+    .diag-right {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .diag-node {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      position: relative;
+    }
+
+    .diag-node-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--black);
+      margin-bottom: 3px;
+    }
+
+    .diag-node-desc {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    .diag-node.highlight-jkt {
+      border-color: #E8B5A6;
+      background: #FDF5F3;
+    }
+
+    .diag-node.highlight-bdg {
+      border-color: #A6C8B5;
+      background: #F2F8F5;
+    }
+
+    .diag-node.highlight-sby {
+      border-color: #A6BED8;
+      background: #F2F6FB;
+    }
+
+    .diag-node.highlight-merchant {
+      border-color: #D4C9A8;
+      background: #FAF7F0;
+    }
+
+    .diag-node.highlight-backend {
+      border-color: var(--border);
+      background: #F0EDE6;
+    }
+
+    .diag-connector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 0;
+    }
+
+    .diag-arrow {
+      width: 1px;
+      height: 20px;
+      background: var(--border);
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .diag-arrow::after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-right: 1.5px solid var(--muted);
+      border-bottom: 1.5px solid var(--muted);
+      transform: rotate(45deg);
+      position: absolute;
+      bottom: -3px;
+      left: -3px;
+    }
+
+    .diag-h-connector {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      justify-content: center;
+    }
+
+    .diag-h-line {
+      height: 1px;
+      width: 24px;
+      background: var(--border);
+    }
+
+    .diag-h-arrow-r::after {
+      content: '›';
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .diag-h-arrow-l::before {
+      content: '‹';
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .conn-label {
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: .07em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    /* Below diagram — backend row */
+    .diag-bottom {
+      margin-top: 28px;
+      border-top: 1px dashed var(--border);
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .diag-bottom-label {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 500;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .diag-bottom-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .diag-chip {
+      font-size: 11px;
+      color: var(--muted);
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      padding: 3px 10px;
+      border-radius: 99px;
+    }
+
+    /* MOBILE MOCKUP SCREENS */
+    .screens-section {
+      margin: 48px 0;
+    }
+
+    .screens-title {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .screens-row {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+
+    .phone-wrap {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .phone-frame {
+      width: 140px;
+      background: var(--black);
+      border-radius: 22px;
+      padding: 10px 8px 14px;
+      box-shadow: 0 12px 40px rgba(14, 14, 13, .2);
+      position: relative;
+    }
+
+    .phone-notch {
+      width: 36px;
+      height: 5px;
+      background: #222;
+      border-radius: 99px;
+      margin: 0 auto 8px;
+    }
+
+    .phone-screen {
+      background: #F8F6F2;
+      border-radius: 14px;
+      overflow: hidden;
+      height: 260px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Screen: Splash / City Selector */
+    .screen-splash {
+      background: var(--black);
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .sp-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      color: white;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .sp-sub {
+      font-size: 9px;
+      color: #666;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .sp-city-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .sp-btn {
+      border-radius: 8px;
+      padding: 7px 12px;
+      font-size: 10px;
+      font-weight: 500;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sp-btn.jkt {
+      background: var(--accent);
+      color: white;
+    }
+
+    .sp-btn.bdg {
+      background: var(--green);
+      color: white;
+    }
+
+    .sp-btn.sby {
+      background: var(--sby);
+      color: white;
+    }
+
+    .sp-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .5);
+      flex-shrink: 0;
+    }
+
+    /* Screen: Home/Discover */
+    .screen-home {
+      background: #F8F6F2;
+      padding: 0;
+    }
+
+    .sh-topbar {
+      background: var(--black);
+      padding: 10px 10px 14px;
+    }
+
+    .sh-greeting {
+      font-size: 8px;
+      color: #888;
+    }
+
+    .sh-city {
+      font-family: 'DM Serif Display', serif;
+      font-size: 14px;
+      color: white;
+    }
+
+    .sh-search {
+      background: #2A2A28;
+      border-radius: 6px;
+      padding: 5px 8px;
+      font-size: 8px;
+      color: #555;
+      margin-top: 6px;
+    }
+
+    .sh-body {
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .sh-section-lbl {
+      font-size: 7px;
+      font-weight: 500;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .sh-cards {
+      display: flex;
+      gap: 5px;
+      overflow: hidden;
+    }
+
+    .sh-card {
+      background: white;
+      border-radius: 7px;
+      width: 60px;
+      flex-shrink: 0;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .06);
+    }
+
+    .sh-card-img {
+      height: 36px;
+      border-radius: 7px 7px 0 0;
+    }
+
+    .sh-card-txt {
+      padding: 4px 5px;
+    }
+
+    .sh-card-name {
+      font-size: 7px;
+      font-weight: 500;
+      color: var(--black);
+    }
+
+    .sh-card-tag {
+      font-size: 6px;
+      color: var(--muted);
+    }
+
+    .sh-tab {
+      background: white;
+      border-radius: 6px;
+      padding: 5px 7px;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .sh-tab-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+    }
+
+    .sh-tab-txt {
+      font-size: 7px;
+      color: var(--black);
+      font-weight: 500;
+    }
+
+    /* Screen: Jobs */
+    .screen-jobs {
+      background: #F8F6F2;
+      padding: 0;
+    }
+
+    .sj-head {
+      background: var(--sby);
+      padding: 10px;
+    }
+
+    .sj-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 13px;
+      color: white;
+    }
+
+    .sj-search {
+      background: rgba(255, 255, 255, .2);
+      border-radius: 5px;
+      padding: 4px 7px;
+      font-size: 7px;
+      color: rgba(255, 255, 255, .7);
+      margin-top: 5px;
+    }
+
+    .sj-body {
+      padding: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .sj-card {
+      background: white;
+      border-radius: 7px;
+      padding: 7px 8px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .05);
+    }
+
+    .sj-role {
+      font-size: 8px;
+      font-weight: 500;
+      color: var(--black);
+    }
+
+    .sj-co {
+      font-size: 7px;
+      color: var(--muted);
+    }
+
+    .sj-tags {
+      display: flex;
+      gap: 3px;
+      margin-top: 4px;
+    }
+
+    .sj-tag {
+      font-size: 6px;
+      padding: 1px 5px;
+      border-radius: 99px;
+    }
+
+    .sj-tag.full {
+      background: #E3EDE8;
+      color: var(--green);
+    }
+
+    .sj-tag.loc {
+      background: #E6EFF8;
+      color: var(--sby);
+    }
+
+    /* Screen: Events */
+    .screen-events {
+      background: #F8F6F2;
+      padding: 0;
+    }
+
+    .se-head {
+      background: #4A3A9B;
+      padding: 10px;
+    }
+
+    .se-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 13px;
+      color: white;
+    }
+
+    .se-sub {
+      font-size: 7px;
+      color: rgba(255, 255, 255, .6);
+      margin-top: 2px;
+    }
+
+    .se-body {
+      padding: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .se-card {
+      background: white;
+      border-radius: 7px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .05);
+      display: flex;
+    }
+
+    .se-card-band {
+      width: 6px;
+      flex-shrink: 0;
+    }
+
+    .se-card-body {
+      padding: 6px 8px;
+      flex: 1;
+    }
+
+    .se-card-title {
+      font-size: 8px;
+      font-weight: 500;
+      color: var(--black);
+    }
+
+    .se-card-date {
+      font-size: 7px;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+
+    .se-card-price {
+      font-size: 7px;
+      font-weight: 500;
+      color: #4A3A9B;
+      margin-top: 3px;
+    }
+
+    /* Screen: Community */
+    .screen-ugc {
+      background: #F8F6F2;
+      padding: 0;
+    }
+
+    .su-head {
+      background: var(--accent);
+      padding: 10px;
+    }
+
+    .su-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 13px;
+      color: white;
+    }
+
+    .su-sub {
+      font-size: 7px;
+      color: rgba(255, 255, 255, .7);
+      margin-top: 1px;
+    }
+
+    .su-body {
+      padding: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .su-post {
+      background: white;
+      border-radius: 7px;
+      padding: 7px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .05);
+    }
+
+    .su-user {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 5px;
+    }
+
+    .su-avatar {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+    }
+
+    .su-name {
+      font-size: 7px;
+      font-weight: 500;
+      color: var(--black);
+    }
+
+    .su-badge {
+      font-size: 6px;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .su-img {
+      width: 100%;
+      height: 50px;
+      border-radius: 5px;
+    }
+
+    .su-caption {
+      font-size: 7px;
+      color: var(--muted);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .su-stars {
+      font-size: 8px;
+      color: #F0B429;
+      margin-top: 2px;
+    }
+
+    /* Screen: Merchant Dashboard */
+    .screen-merchant {
+      background: #F8F6F2;
+      padding: 0;
+    }
+
+    .sm-head {
+      background: #2D2926;
+      padding: 10px;
+    }
+
+    .sm-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 12px;
+      color: white;
+    }
+
+    .sm-sub {
+      font-size: 7px;
+      color: #888;
+      margin-top: 1px;
+    }
+
+    .sm-body {
+      padding: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .sm-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+    }
+
+    .sm-stat {
+      background: white;
+      border-radius: 6px;
+      padding: 6px 7px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+    }
+
+    .sm-stat-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 14px;
+      color: var(--black);
+    }
+
+    .sm-stat-lbl {
+      font-size: 6px;
+      color: var(--muted);
+    }
+
+    .sm-action {
+      background: #F0EDE6;
+      border-radius: 6px;
+      padding: 7px;
+      border: 1px solid var(--border);
+    }
+
+    .sm-action-title {
+      font-size: 8px;
+      font-weight: 500;
+      color: var(--black);
+    }
+
+    .sm-action-desc {
+      font-size: 7px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .phone-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--black);
+      text-align: center;
+    }
+
+    .phone-sublabel {
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 300;
+    }
+
+    /* BOTTOM NAV */
+    .phone-nav {
+      display: flex;
+      justify-content: space-around;
+      background: white;
+      border-top: 1px solid #eee;
+      padding: 6px 4px 4px;
+      border-radius: 0 0 14px 14px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1px;
+    }
+
+    .nav-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 5px;
+    }
+
+    .nav-lbl {
+      font-size: 5px;
+      color: var(--muted);
+    }
+
+    .nav-item.active .nav-lbl {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .nav-item.active .nav-dot {
+      background: var(--accent);
+    }
+
+    /* MERCHANT */
+    .merchant-box {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      margin: 40px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .merchant-box-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      color: var(--black);
+    }
+
+    .merchant-box-desc {
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    .merchant-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .merchant-features li {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #3A3835;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .merchant-features li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* PHASES */
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .phase-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      background: var(--off-white);
+      position: relative;
+    }
+
+    .phase-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 52px;
+      line-height: 1;
+      color: var(--cream);
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .phase-period {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .phase-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 20px;
+      color: var(--black);
+      margin-bottom: 14px;
+    }
+
+    .phase-list {
+      list-style: none;
+    }
+
+    .phase-list li {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 300;
+      padding: 3px 0;
+      border-bottom: 1px solid var(--cream);
+    }
+
+    .phase-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* WHY */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .why-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .why-icon {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      margin-bottom: 14px;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .why-title {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: var(--black);
+    }
+
+    .why-desc {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* CLOSING */
+    .closing {
+      background: var(--black);
+      color: var(--off-white);
+      padding: 96px 64px;
+      text-align: center;
+    }
+
+    .closing-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(36px, 5vw, 60px);
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -.01em;
+    }
+
+    .closing-title em {
+      font-style: italic;
+      color: #E8856A;
+    }
+
+    .closing-sub {
+      font-size: 16px;
+      color: #8A8781;
+      font-weight: 300;
+      max-width: 500px;
+      margin: 0 auto 48px;
+      line-height: 1.75;
+    }
+
+    .closing-kpi {
+      display: inline-grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: #2A2A28;
+      border: 1px solid #2A2A28;
+      border-radius: 12px;
+      overflow: hidden;
+      max-width: 560px;
+      width: 100%;
+    }
+
+    .kpi-cell {
+      background: #1A1A18;
+      padding: 24px 20px;
+    }
+
+    .kpi-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 32px;
+      color: var(--off-white);
+      margin-bottom: 4px;
+    }
+
+    .kpi-lbl {
+      font-size: 12px;
+      color: #6A6A68;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .cover {
+        padding: 40px 24px;
+      }
+
+      .cover-top {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .cover-body {
+        padding: 60px 0 32px;
+      }
+
+      .cover-title {
+        font-size: 38px;
+      }
+
+      .cover-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .page {
+        padding: 64px 24px;
+      }
+
+      .stat-row,
+      .city-grid,
+      .diag-full {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .module-item {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .diagram-wrap {
+        padding: 24px 16px;
+      }
+
+      .diag-center {
+        margin-bottom: 24px;
+      }
+
+      .diag-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .city-pills {
+        flex-wrap: wrap;
+      }
+
+      .screens-row {
+        padding-bottom: 20px;
+      }
+
+      .why-grid,
+      .phase-grid,
+      .merchant-box,
+      .closing-kpi {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .merchant-box {
+        padding: 32px 24px;
+        gap: 32px;
+      }
+
+      .closing {
+        padding: 64px 24px;
+      }
+
+      .phase-num {
+        font-size: 40px;
+        top: 8px;
+        right: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-top">
+      <div class="logo-mark">
+        <span class="jktgo-tag">JKTGO</span>
+      </div>
+      <div class="cover-tag">Product Idea</div>
+    </div>
+    <div class="cover-body">
+      <div class="cover-label">Product Idea · 2026</div>
+      <h1 class="cover-title">Tiga kota,<br>satu <em>aplikasi.</em></h1>
+      <p class="cover-sub">Super app yang menyatukan JKTGO, BandungGO, dan SurabayaGO dalam satu ekosistem digital —
+        satu download untuk semua kebutuhan urban life di kota mana pun.</p>
+      <div class="city-pills">
+        <span class="city-pill jkt">Jakarta · 1.8M+ followers</span>
+        <span class="city-pill bdg">Bandung · 293K followers</span>
+        <span class="city-pill sby">Surabaya · 169K followers</span>
+      </div>
+    </div>
+    <div class="cover-bottom">
+      <div class="cover-role">Dipersiapkan untuk <strong>JKTGO</strong> &ensp;·&ensp; By <a
+          href="https://fldx.dev">Feildrix</a></div>
+      <div class="cover-page">01 / 08</div>
+    </div>
+  </div>
+
+  <!-- 01 MASALAH -->
+  <section class="page">
+    <div class="section-num">01 &ensp; Masalah</div>
+    <h2 class="section-title">Tiga brand kuat,<br>tanpa <em>platform digital sendiri.</em></h2>
+    <p class="body-text">JKTGO, BandungGO, dan SurabayaGO telah membangun kepercayaan sebagai suara paling relevan untuk
+      urban life di masing-masing kota. Jutaan orang mengikuti mereka di Instagram dan TikTok setiap harinya.</p>
+    <p class="body-text">Namun ada ironi besar di balik angka itu: <strong>semua aset digital ini tinggal di platform
+        milik orang lain.</strong> Setiap perubahan algoritma Instagram bisa memangkas jangkauan seketika. Setiap
+      pembaca yang datang — JKTGO Group tidak tahu siapa mereka, ke mana mereka pergi, dan kapan mereka akan kembali.
+    </p>
+    <div class="pull-quote">"2,3 juta combined followers, tapi tidak satu pun data user yang dimiliki sendiri."</div>
+    <p class="body-text">Jobs board masih feed manual. Event tersebar tanpa sistem. Tidak ada cara bagi pembaca untuk
+      menyimpan rekomendasi, membeli tiket, atau terhubung sesama komunitas — semua potensi itu tercecer. Saatnya JKTGO
+      Group punya platform sendiri.</p>
+  </section>
+
+  <!-- 02 PELUANG MULTI-KOTA -->
+  <section class="page">
+    <div class="section-num">02 &ensp; Peluang</div>
+    <h2 class="section-title">Tiga kota, satu<br><em>keunggulan kompetitif.</em></h2>
+    <p class="body-text">Yang membuat peluang ini unik bukan hanya besarnya audiens — tapi fakta bahwa JKTGO Group sudah
+      punya kehadiran di tiga kota utama Indonesia sekaligus. Tidak ada kompetitor yang bisa mengklaim hal yang sama.
+    </p>
+    <div class="city-grid">
+      <div class="city-card jkt">
+        <div class="city-card-name">Jakarta</div>
+        <div class="city-card-brand">JKTGO</div>
+        <div class="city-card-stat">1.8M+</div>
+        <div class="city-card-statlbl">Instagram followers</div>
+        <div class="city-card-note">Kota utama. Pusat finance, hiburan, dan kuliner. Urban millennial terbesar di
+          Indonesia.</div>
+      </div>
+      <div class="city-card bdg">
+        <div class="city-card-name">Bandung</div>
+        <div class="city-card-brand">BandungGO</div>
+        <div class="city-card-stat">293K</div>
+        <div class="city-card-statlbl">Instagram followers</div>
+        <div class="city-card-note">Destinasi weekend favorit dari Bandung. Kota kreatif dengan scene kuliner & fashion
+          yang kuat.</div>
+      </div>
+      <div class="city-card sby">
+        <div class="city-card-name">Surabaya</div>
+        <div class="city-card-brand">SurabayaGO</div>
+        <div class="city-card-stat">169K</div>
+        <div class="city-card-statlbl">Instagram followers</div>
+        <div class="city-card-note">Metro terbesar kedua di Indonesia, covering Surabaya & Malang — pasar yang massif
+          dan underserved.</div>
+      </div>
+    </div>
+    <p class="body-text">Satu app yang bisa switch antar kota berarti seorang warga Jakarta yang berencana weekend ke
+      Bandung cukup buka satu app yang sama — menemukan rekomendasi BandungGO, beli tiket event di sana. <strong>Ini
+        adalah keunggulan yang tidak bisa dibangun dalam semalam oleh kompetitor mana
+        pun.</strong></p>
+  </section>
+
+  <!-- 03 SOLUSI -->
+  <section class="page">
+    <div class="section-num">03 &ensp; Solusi</div>
+    <h2 class="section-title">GO Super App —<br><em>satu app,</em> semua kota.</h2>
+    <p class="body-text">Mobile app dengan city switcher built-in. User pilih kota mereka — atau biarkan GPS yang
+      memilih. Semua modul bekerja di semua kota dengan konten yang dikurasi secara lokal oleh tim masing-masing GO
+      brand.</p>
+    <div class="modules-wrap">
+      <div class="module-item">
+        <div class="module-left">
+          <div class="module-name">City Discover</div>
+          <span class="module-tag tag-core">Core</span>
+        </div>
+        <div>
+          <p class="module-desc">Jantung app. Rekomendasi tempat makan, cafe, dan aktivitas yang dipersonalisasi —
+            dengan konten lokal dari tim JKTGO, BandungGO, atau SurabayaGO tergantung kota yang dipilih user.</p>
+          <ul class="module-points">
+            <li>Filter by mood, budget, area, kategori — di kota mana pun</li>
+            <li>GPS-based suggestions: "dekat sini sekarang" bekerja di semua kota</li>
+            <li>Simpan tempat favorit ke wishlist pribadi</li>
+            <li>Konten editorial otomatis sesuai kota aktif</li>
+          </ul>
+        </div>
+      </div>
+      <div class="module-item">
+        <div class="module-left">
+          <div class="module-name">JobsGO Board</div>
+          <span class="module-tag tag-rev">Revenue</span>
+        </div>
+        <div>
+          <p class="module-desc">Platform rekrutmen proper untuk semua kota. Pembaca JKTGO Group — urban millennial dan
+            Gen-Z — adalah demografis paling dicari. Filter lowongan by kota, atau lihat semua sekaligus untuk yang
+            bersedia relocate.</p>
+          <ul class="module-points">
+            <li>Lamar kerja langsung dari app, upload CV, pantau status</li>
+            <li>Filter by kota: Jakarta / Bandung / Surabaya / Remote</li>
+            <li>Job alert push notification sesuai profil user</li>
+          </ul>
+        </div>
+      </div>
+      <div class="module-item">
+        <div class="module-left">
+          <div class="module-name">Events & Ticketing</div>
+          <span class="module-tag tag-rev">Revenue</span>
+        </div>
+        <div>
+          <p class="module-desc">Discovery dan pembelian tiket event di semua kota. User bisa browse event Jakarta
+            sekarang, lalu switch ke Bandung untuk cek acara weekend depan — semuanya satu app, satu checkout.</p>
+          <ul class="module-points">
+            <li>Event discovery by kota, tanggal, dan kategori</li>
+            <li>Beli tiket in-app tanpa redirect, e-ticket QR langsung tersimpan</li>
+            <li>Reminder notif H-1 sebelum event dimulai</li>
+          </ul>
+        </div>
+      </div>
+      <div class="module-item">
+        <div class="module-left">
+          <div class="module-name">Community & UGC</div>
+          <span class="module-tag tag-core">Core</span>
+        </div>
+        <div>
+          <p class="module-desc">Feed komunitas per kota. Warga Jakarta bisa baca review dari sesama warga Jakarta,
+            warga Bandung dari komunitas Bandung — tapi dengan opsi untuk explore feed kota lain saat merencanakan
+            perjalanan.</p>
+          <ul class="module-points">
+            <li>Review dan rating tempat dengan foto, terorganisir per kota</li>
+            <li>Badge "GO Insider" per kota untuk kontributor aktif</li>
+            <li>Explore feed kota lain saat switch mode traveller</li>
+          </ul>
+        </div>
+      </div>
+      <div class="module-item">
+        <div class="module-left">
+          <div class="module-name">Weekend Planner</div>
+          <span class="module-tag tag-ai">AI-powered</span>
+        </div>
+        <div>
+          <p class="module-desc">Fitur pembeda paling kuat. Sebutkan situasi — budget, berapa orang, kota tujuan, mood —
+            dan app merangkainya menjadi itinerary dari database terkurasi GO. Warga Jakarta yang mau ke Bandung tinggal
+            bilang: "weekend di Bandung, berdua, budget 1jt" — selesai.</p>
+          <ul class="module-points">
+            <li>Itinerary lintas kota: bisa plan perjalanan Jakarta → Bandung sekaligus</li>
+            <li>Langsung beli tiket atau reservasi dari dalam itinerary</li>
+            <li>Share rencana ke teman via WhatsApp dengan satu tap</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 ECOSYSTEM DIAGRAM -->
+  <section class="page">
+    <div class="section-num">04 &ensp; Ekosistem & Flow</div>
+    <h2 class="section-title">Bagaimana semua<br>bagian <em>terhubung.</em></h2>
+    <p class="body-text">Super app adalah ujung yang user lihat. Di belakangnya, satu backend tunggal melayani tiga
+      brand dan tiga kota — dengan Merchant Dashboard sebagai portal terpisah khusus B2B.</p>
+
+    <div class="eco-diagram">
+      <div class="eco-title">Ecosystem overview — app · user · merchant · backend</div>
+      <div class="diagram-wrap">
+        <div class="diag-full">
+
+          <!-- LEFT: Users -->
+          <div class="diag-left">
+            <div
+              style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:4px;">
+              Users</div>
+            <div class="diag-node highlight-jkt">
+              <div class="diag-node-title">🧑‍💼 Warga Jakarta</div>
+              <div class="diag-node-desc">Discover, jobs, events, komunitas lokal</div>
+            </div>
+            <div class="diag-node highlight-bdg">
+              <div class="diag-node-title">🏔️ Warga Bandung</div>
+              <div class="diag-node-desc">City guide Bandung, event lokal, UGC Bandung</div>
+            </div>
+            <div class="diag-node highlight-sby">
+              <div class="diag-node-title">🌊 Warga Surabaya</div>
+              <div class="diag-node-desc">Metro SBY & Malang, jobs, events</div>
+            </div>
+            <div class="diag-node" style="border-style:dashed;">
+              <div class="diag-node-title">✈️ Traveller / Visitor</div>
+              <div class="diag-node-desc">Switch kota, Weekend Planner AI, lintas kota</div>
+            </div>
+          </div>
+
+          <!-- CENTER: App -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+            <div
+              style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);">
+              GO Super App</div>
+            <div class="diag-app-shell">
+              <div class="diag-app-notch"></div>
+              <div class="diag-app-screen">
+                <div class="diag-screen-header"></div>
+                <div class="diag-screen-row w60"></div>
+                <div class="diag-screen-block">
+                  <div class="diag-block-item" style="background:#3A3835;opacity:.7;"></div>
+                  <div class="diag-block-item" style="background:#2A5A3A;opacity:.7;"></div>
+                  <div class="diag-block-item" style="background:#1A3A5A;opacity:.7;"></div>
+                  <div class="diag-block-item" style="background:#5A3A2A;opacity:.7;"></div>
+                </div>
+                <div class="diag-screen-row w90"></div>
+                <div class="diag-screen-row w60"></div>
+              </div>
+            </div>
+            <div style="font-size:9px;color:var(--muted);text-align:center;line-height:1.5;max-width:100px;">5
+              modules<br>3 cities<br>iOS & Android</div>
+
+            <div style="width:1px;height:20px;background:var(--border);position:relative;">
+              <div
+                style="position:absolute;bottom:-5px;left:-3px;width:7px;height:7px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(45deg);">
+              </div>
+            </div>
+
+            <div class="diag-node highlight-backend" style="width:120px;text-align:center;">
+              <div class="diag-node-title" style="font-size:11px;">⚙️ Backend API</div>
+              <div class="diag-node-desc" style="font-size:10px;">1 backend<br>untuk semua kota</div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Merchant -->
+          <div class="diag-right">
+            <div
+              style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:4px;">
+              Merchant Portal (Web)</div>
+            <div class="diag-node highlight-merchant">
+              <div class="diag-node-title">🍽️ F&B / Venue</div>
+              <div class="diag-node-desc">Kelola listing, analytics kunjungan, beli featured slot</div>
+            </div>
+            <div class="diag-node highlight-merchant">
+              <div class="diag-node-title">🎪 Event Organizer</div>
+              <div class="diag-node-desc">Buat & manage event, atur tiket, lihat penjualan</div>
+            </div>
+            <div class="diag-node highlight-merchant">
+              <div class="diag-node-title">🏢 Employer / HRD</div>
+              <div class="diag-node-desc">Post lowongan, company profile, screening kandidat</div>
+            </div>
+            <div class="diag-node" style="border-color:#D4C9A8;background:#FAF7F0;">
+              <div class="diag-node-title">📊 Analitik & Revenue</div>
+              <div class="diag-node-desc">Views, klik, konversi, invoice — semua dalam satu dashboard</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="diag-bottom">
+          <div class="diag-bottom-label">Backend services</div>
+          <div class="diag-bottom-chips">
+            <span class="diag-chip">Places & City Data</span>
+            <span class="diag-chip">Auth & Profiles</span>
+            <span class="diag-chip">Jobs Service</span>
+            <span class="diag-chip">Ticket & Payment</span>
+            <span class="diag-chip">UGC & Moderation</span>
+            <span class="diag-chip">Push Notifications</span>
+            <span class="diag-chip">AI / Planner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE SCREENS -->
+    <div class="screens-section">
+      <div class="screens-title">Mobile app — key screens</div>
+      <div class="screens-row">
+
+        <!-- Screen 1: City Selector -->
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen screen-splash"
+              style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:20px;background:var(--black);">
+              <div class="sp-logo">GO</div>
+              <div class="sp-sub">pilih kotamu</div>
+              <div class="sp-city-btns">
+                <div class="sp-btn jkt">
+                  <div class="sp-dot"></div>Jakarta · JKTGO
+                </div>
+                <div class="sp-btn bdg">
+                  <div class="sp-dot"></div>Bandung · BandungGO
+                </div>
+                <div class="sp-btn sby">
+                  <div class="sp-dot"></div>Surabaya · SurabayaGO
+                </div>
+              </div>
+              <div style="font-size:7px;color:#555;margin-top:4px;">atau gunakan lokasi saat ini</div>
+            </div>
+          </div>
+          <div class="phone-label">City Selector</div>
+          <div class="phone-sublabel">Onboarding / Switch kota</div>
+        </div>
+
+        <!-- Screen 2: Home Discover -->
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen screen-home" style="padding-bottom:32px;">
+              <div class="sh-topbar">
+                <div class="sh-greeting">Selamat sore, Jakarta 🌆</div>
+                <div class="sh-city">JKTGO Discover</div>
+                <div class="sh-search">🔍 &nbsp;cari tempat, event, area...</div>
+              </div>
+              <div class="sh-body">
+                <div class="sh-section-lbl">Trending hari ini</div>
+                <div class="sh-cards">
+                  <div class="sh-card">
+                    <div class="sh-card-img" style="background:linear-gradient(135deg,#C94B2A,#E8856A);"></div>
+                    <div class="sh-card-txt">
+                      <div class="sh-card-name">Anomali Coffee</div>
+                      <div class="sh-card-tag">Cafe · Kemang</div>
+                    </div>
+                  </div>
+                  <div class="sh-card">
+                    <div class="sh-card-img" style="background:linear-gradient(135deg,#2A6B4B,#5DCAA5);"></div>
+                    <div class="sh-card-txt">
+                      <div class="sh-card-name">Rooftop SBY</div>
+                      <div class="sh-card-tag">Bar · Sudirman</div>
+                    </div>
+                  </div>
+                  <div class="sh-card">
+                    <div class="sh-card-img" style="background:linear-gradient(135deg,#1A5FA5,#5BAAD8);"></div>
+                    <div class="sh-card-txt">
+                      <div class="sh-card-name">BOCA JKT</div>
+                      <div class="sh-card-tag">Restoran</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sh-section-lbl">Weekend ini di Jakarta</div>
+                <div class="sh-tab">
+                  <div class="sh-tab-dot" style="background:#4A3A9B;"></div>
+                  <div class="sh-tab-txt">4 event · mulai Rp 50rb</div>
+                </div>
+                <div class="sh-tab">
+                  <div class="sh-tab-dot" style="background:var(--accent);"></div>
+                  <div class="sh-tab-txt">Planner AI: weekend makan bareng?</div>
+                </div>
+              </div>
+              <div class="phone-nav">
+                <div class="nav-item active">
+                  <div class="nav-dot" style="background:var(--accent);"></div>
+                  <div class="nav-lbl" style="color:var(--accent);">Discover</div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-dot" style="background:#ddd;"></div>
+                  <div class="nav-lbl">Jobs</div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-dot" style="background:#ddd;"></div>
+                  <div class="nav-lbl">Events</div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-dot" style="background:#ddd;"></div>
+                  <div class="nav-lbl">Komunitas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-label">Home · Discover</div>
+          <div class="phone-sublabel">Tab utama</div>
+        </div>
+
+        <!-- Screen 3: Jobs -->
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen screen-jobs" style="padding-bottom:32px;">
+              <div class="sj-head">
+                <div class="sj-title">JobsGO Board</div>
+                <div class="sj-search">🔍 &nbsp;cari posisi atau perusahaan...</div>
+              </div>
+              <div class="sj-body">
+                <div class="sj-card">
+                  <div class="sj-role">Product Designer</div>
+                  <div class="sj-co">Tokopedia · Jakarta</div>
+                  <div class="sj-tags">
+                    <span class="sj-tag full">Full-time</span>
+                    <span class="sj-tag loc">Jakarta</span>
+                  </div>
+                </div>
+                <div class="sj-card">
+                  <div class="sj-role">Software Engineer</div>
+                  <div class="sj-co">Gojek · Hybrid</div>
+                  <div class="sj-tags">
+                    <span class="sj-tag full">Full-time</span>
+                    <span class="sj-tag loc" style="background:#E6EFF8;color:var(--sby);">Remote</span>
+                  </div>
+                </div>
+                <div class="sj-card">
+                  <div class="sj-role">Brand Marketing</div>
+                  <div class="sj-co">JKTGO Group · BDG</div>
+                  <div class="sj-tags">
+                    <span class="sj-tag full">Full-time</span>
+                    <span class="sj-tag loc" style="background:#E3EDE8;color:var(--bdg);">Bandung</span>
+                  </div>
+                </div>
+              </div>
+              <div class="phone-nav">
+                <div class="nav-item">
+                  <div class="nav-dot" style="background:#ddd;"></div>
+                  <div class="nav-lbl">Discover</div>
+                </div>
+                <div class="nav-item active">
+                  <div class="nav-dot" style="background:var(--sby);"></div>
+                  <div class="nav-lbl" style="color:var(--sby);">Jobs</div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-dot" style="background:#ddd;"></div>
+                  <div class="nav-lbl">Events</div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-dot" style="background:#ddd;"></div>
+                  <div class="nav-lbl">Komunitas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-label">JobsGO Board</div>
+          <div class="phone-sublabel">Lintas 3 kota</div>
+        </div>
+
+        <!-- Screen 4: Events -->
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen screen-events" style="padding-bottom:32px;">
+              <div class="se-head">
+                <div class="se-title">Events & Tiket</div>
+                <div class="se-sub">Jakarta · weekend ini</div>
+              </div>
+              <div class="se-body">
+                <div class="se-card">
+                  <div class="se-card-band" style="background:#4A3A9B;"></div>
+                  <div class="se-card-body">
+                    <div class="se-card-title">Jazz Night at Rooftop</div>
+                    <div class="se-card-date">Sabtu, 14 Jun · GBK Arena</div>
+                    <div class="se-card-price">Rp 150.000</div>
+                  </div>
+                </div>
+                <div class="se-card">
+                  <div class="se-card-band" style="background:var(--accent);"></div>
+                  <div class="se-card-body">
+                    <div class="se-card-title">JKTGO Food Fest</div>
+                    <div class="se-card-date">Minggu, 15 Jun · Kemang</div>
+                    <div class="se-card-price">Free entry</div>
+                  </div>
+                </div>
+                <div class="se-card">
+                  <div class="se-card-band" style="background:var(--bdg);"></div>
+                  <div class="se-card-body">
+                    <div class="se-card-title">Bandung Night Market</div>
+                    <div class="se-card-date">Sabtu · Braga · Bandung</div>
+                    <div class="se-card-price">Rp 50.000</div>
+                  </div>
+                </div>
+              </div>
+              <div class="phone-nav">
+                <div class="nav-item">
+                  <div class="nav-dot" style="background:#ddd;"></div>
+                  <div class="nav-lbl">Discover</div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-dot" style="background:#ddd;"></div>
+                  <div class="nav-lbl">Jobs</div>
+                </div>
+                <div class="nav-item active">
+                  <div class="nav-dot" style="background:#4A3A9B;"></div>
+                  <div class="nav-lbl" style="color:#4A3A9B;">Events</div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-dot" style="background:#ddd;"></div>
+                  <div class="nav-lbl">Komunitas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-label">Events & Ticketing</div>
+          <div class="phone-sublabel">Beli tiket in-app</div>
+        </div>
+
+        <!-- Screen 5: Community -->
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen screen-ugc" style="padding-bottom:32px;">
+              <div class="su-head">
+                <div class="su-title">Komunitas GO</div>
+                <div class="su-sub">Review & cerita dari sesama</div>
+              </div>
+              <div class="su-body">
+                <div class="su-post">
+                  <div class="su-user">
+                    <div class="su-avatar" style="background:linear-gradient(135deg,var(--accent),#F0B429);"></div>
+                    <div>
+                      <div class="su-name">anitajkt</div>
+                      <div class="su-badge">⭐ JKT Insider</div>
+                    </div>
+                  </div>
+                  <div class="su-img"
+                    style="background:linear-gradient(135deg,#C94B2A22,#F0B42922);border:1px solid var(--border);border-radius:5px;">
+                  </div>
+                  <div class="su-stars">★★★★★</div>
+                  <div class="su-caption">Cobain Anomali Coffee di Kemang, ambiance-nya juara banget untuk WFA!</div>
+                </div>
+                <div class="su-post">
+                  <div class="su-user">
+                    <div class="su-avatar" style="background:linear-gradient(135deg,var(--bdg),#A6C8B5);"></div>
+                    <div>
+                      <div class="su-name">rizkybdg</div>
+                      <div class="su-badge" style="color:var(--bdg);">⭐ BDG Insider</div>
+                    </div>
+                  </div>
+                  <div class="su-stars">★★★★☆</div>
+                  <div class="su-caption">Braga masih jadi favorit buat evening walk 🌿</div>
+                </div>
+              </div>
+              <div class="phone-nav">
+                <div class="nav-item">
+                  <div class="nav-dot" style="background:#ddd;"></div>
+                  <div class="nav-lbl">Discover</div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-dot" style="background:#ddd;"></div>
+                  <div class="nav-lbl">Jobs</div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-dot" style="background:#ddd;"></div>
+                  <div class="nav-lbl">Events</div>
+                </div>
+                <div class="nav-item active">
+                  <div class="nav-dot" style="background:var(--accent);"></div>
+                  <div class="nav-lbl" style="color:var(--accent);">Komunitas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-label">Community & UGC</div>
+          <div class="phone-sublabel">Reviews per kota</div>
+        </div>
+
+        <!-- Screen 6: Merchant Dashboard (web) -->
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen screen-merchant">
+              <div class="sm-head">
+                <div class="sm-title">Merchant Dashboard</div>
+                <div class="sm-sub">hellojktgo.com/merchant · web portal</div>
+              </div>
+              <div class="sm-body">
+                <div class="sm-stats">
+                  <div class="sm-stat">
+                    <div class="sm-stat-num">4.2K</div>
+                    <div class="sm-stat-lbl">Views bulan ini</div>
+                  </div>
+                  <div class="sm-stat">
+                    <div class="sm-stat-num">187</div>
+                    <div class="sm-stat-lbl">Klik ke listing</div>
+                  </div>
+                  <div class="sm-stat">
+                    <div class="sm-stat-num">23</div>
+                    <div class="sm-stat-lbl">Tiket terjual</div>
+                  </div>
+                  <div class="sm-stat">
+                    <div class="sm-stat-num">8</div>
+                    <div class="sm-stat-lbl">Lamaran masuk</div>
+                  </div>
+                </div>
+                <div class="sm-action">
+                  <div class="sm-action-title">📌 Featured placement aktif</div>
+                  <div class="sm-action-desc">Listing kamu tampil di halaman utama JKTGO sampai 30 Jun</div>
+                </div>
+                <div class="sm-action">
+                  <div class="sm-action-title">🎟️ Event terdaftar: 2</div>
+                  <div class="sm-action-desc">JKTGO Food Fest · Jazz Night — kelola tiket & check-in</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-label">Merchant Portal</div>
+          <div class="phone-sublabel">Web — B2B only</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 MERCHANT -->
+  <section class="page">
+    <div class="section-num">05 &ensp; Ekosistem B2B</div>
+    <h2 class="section-title">Satu portal untuk<br>semua <em>mitra bisnis.</em></h2>
+    <p class="body-text">Merchant Dashboard hadir sebagai website terpisah — bukan bagian dari app consumer. Dirancang
+      untuk bisnis F&B, venue, event organizer, dan employer yang ingin menjangkau pembaca GO di tiga kota sekaligus.
+    </p>
+    <div class="merchant-box">
+      <div>
+        <h3 class="merchant-box-title">Merchant Dashboard Portal</h3>
+        <p class="merchant-box-desc">Self-serve portal mandiri untuk semua kebutuhan bisnis di ekosistem GO Group — dari
+          listing tempat, management event, hingga posting lowongan — tanpa perlu menghubungi tim JKTGO satu per satu.
+          Pilih kota atau aktif di ketiganya sekaligus.</p>
+      </div>
+      <ul class="merchant-features">
+        <li>Klaim & kelola profil bisnis per kota</li>
+        <li>Daftarkan & manage event + atur tiket</li>
+        <li>Post lowongan kerja langsung ke JobsGO</li>
+        <li>Analytics: views, klik, dan konversi per kota</li>
+        <li>Beli featured placement di homepage GO</li>
+        <li>Buat promo & voucher eksklusif pembaca GO</li>
+      </ul>
+    </div>
+    <p class="body-text">Merchant tidak hanya membeli exposure — mereka membeli <strong>akses ke 2,3 juta combined
+        audience</strong> yang tersegmentasi per kota dan per kategori minat. Ini yang membuat GO berbeda dari iklan
+      Instagram biasa.</p>
+  </section>
+
+  <!-- 06 KENAPA SEKARANG -->
+  <section class="page">
+    <div class="section-num">06 &ensp; Kenapa Sekarang</div>
+    <h2 class="section-title">Empat alasan untuk<br>memulai <em>hari ini.</em></h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">I.</div>
+        <div class="why-title">2,3 juta audience siap dikonversi</div>
+        <div class="why-desc">Tidak perlu biaya akuisisi user dari nol. Combined followers JKTGO, BandungGO, dan
+          SurabayaGO adalah pipeline terhangat yang bisa dimiliki sebuah produk baru.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">II.</div>
+        <div class="why-title">Konten & kurasi sudah berjalan</div>
+        <div class="why-desc">Database tempat, event, dan lowongan ketiga GO brand adalah fondasi yang sudah ada. App
+          ini tidak perlu memulai dari halaman kosong — tinggal digitize dan strukturkan.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">III.</div>
+        <div class="why-title">Tiga kota = keunggulan kompetitif</div>
+        <div class="why-desc">Tidak ada city guide Indonesia yang sudah punya super app lintas Jakarta, Bandung, dan
+          Surabaya sekaligus. Window ini tidak akan terbuka selamanya.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">IV.</div>
+        <div class="why-title">Revenue model yang jelas</div>
+        <div class="why-desc">Ticketing, featured merchant placement, job board premium — multiple revenue stream yang
+          konkret dan bisa aktif dari fase pertama, bukan hanya bergantung pada iklan semata.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 ROADMAP -->
+  <section class="page">
+    <div class="section-num">07 &ensp; Roadmap</div>
+    <h2 class="section-title">Tiga fase menuju<br><em>full launch.</em></h2>
+    <p class="body-text">Pendekatan incremental — validasi di Jakarta lebih dulu, lalu expand ke Bandung dan Surabaya.
+      Setiap fase menghasilkan produk yang bisa digunakan, diukur, dan diperbaiki sebelum scale.</p>
+    <div class="phase-grid">
+      <div class="phase-card">
+        <div class="phase-num">1</div>
+        <div class="phase-period">Bulan 1–3</div>
+        <div class="phase-title">Foundation</div>
+        <ul class="phase-list">
+          <li>App iOS & Android (beta JKT)</li>
+          <li>City Discover — Jakarta</li>
+          <li>Profil & autentikasi user</li>
+          <li>Simpan tempat & wishlist</li>
+          <li>City switcher UI</li>
+        </ul>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">2</div>
+        <div class="phase-period">Bulan 4–6</div>
+        <div class="phase-title">Core Modules</div>
+        <ul class="phase-list">
+          <li>JobsGO Board — lintas 3 kota</li>
+          <li>Events & Ticketing + payment</li>
+          <li>Merchant web portal (beta)</li>
+          <li>Expand: BandungGO & SurabayaGO</li>
+          <li>City switcher live</li>
+        </ul>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">3</div>
+        <div class="phase-period">Bulan 7–9</div>
+        <div class="phase-title">Growth Layer</div>
+        <ul class="phase-list">
+          <li>Community & UGC per kota</li>
+          <li>Weekend Planner AI</li>
+          <li>Merchant analytics & featured ads</li>
+          <li>Program GO Insider loyalty</li>
+          <li>Ekspansi kota berikutnya</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <div class="closing">
+    <h2 class="closing-title">Tiga kota.<br>Satu <em>ekosistem.</em><br>Satu <em>app.</em></h2>
+    <p class="closing-sub">JKTGO, BandungGO, SurabayaGO — tiga brand yang sudah dipercaya jutaan orang. Saatnya
+      menyatukannya dalam satu produk digital yang benar-benar milik sendiri.</p>
+    <div class="closing-kpi">
+      <div class="kpi-cell">
+        <div class="kpi-num">2,3M+</div>
+        <div class="kpi-lbl">combined audience siap</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-num">3 kota</div>
+        <div class="kpi-lbl">dari hari pertama launch</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-num">9 bln</div>
+        <div class="kpi-lbl">estimasi full launch</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
