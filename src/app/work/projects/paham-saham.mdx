@@ -1,0 +1,47 @@
+---
+title: 'Paham Saham: Indonesian Capital Market Information Center'
+publishedAt: '2026-05-10'
+summary: 'An open, structured, and easy-to-understand information center for learning stock market investing in Indonesia.'
+images:
+  - '/images/projects/paham-saham/pahamsaham_1.png'
+  - '/images/projects/paham-saham/pahamsaham_2.png'
+  - '/images/projects/paham-saham/pahamsaham_3.png'
+  - '/images/projects/paham-saham/pahamsaham_4.png'
+  - '/images/projects/paham-saham/pahamsaham_5.png'
+team:
+  - name: 'Feildrix Liemdra'
+    role: 'Fullstack Developer'
+    avatar: '/images/avatar_fldx.jpg'
+    linkedIn: 'https://www.linkedin.com/in/feildrix-liemdra/'
+link: 'https://pahamsaham.id'
+---
+
+## Overview
+
+Paham Saham is an open, structured, and easy-to-understand information center designed to democratize stock market investing in Indonesia. Founded on the principle of removing unnecessary financial complexity, Paham Saham translates intimidating jargon into accessible language, provides a step-by-step roadmap for absolute beginners, and offers a comprehensive directory of resources to help retail investors build a sustainable trading or investing mindset.
+
+By offering 100% free access to structured financial concepts, the platform works towards elevating national financial literacy and enabling individuals to confidently navigate the Indonesia Stock Exchange (Bursa Efek Indonesia / BEI).
+
+## Key Features
+
+- **Peta Belajar (Structured Learning Roadmaps)**: A comprehensive, 4-stage roadmap containing 14 highly structured topics guiding users from basic market mechanisms up to corporate actions, portfolio risk management, and Advanced e-IPO guides.
+- **Kamus Glosarium (Interactive Glossary)**: A searchable dictionary to quickly demystify complex financial terminology and jargon with concise, real-world analogies.
+- **Daftar Emiten BEI (BEI Stock Directory)**: An interactive portal where users can browse listed companies in the Indonesia Stock Exchange, analyze sectors, and perform foundational research.
+- **Akses Terbuka & Bebas (Open Access)**: An ad-free, premium, and zero-friction reading environment optimized for smooth content consumption and maximum user retention.
+
+## Technologies Used
+
+- **Next.js**: Powering the frontend and backend operations with seamless server-side rendering (SSR), static site generation (SSG) for static learning content, and dynamic route loading.
+- **PostgreSQL**: Serving as the relational database backend to store the BEI emitens database, glossary terms, and structured learning track metadata.
+- **Redis**: Implementing a high-speed memory cache for stock directories, hot-loaded glossary definitions, and metadata to reduce database queries and achieve sub-second response times.
+- **HeroUI**: Providing a premium, highly responsive component library that supports interactive features and rich visual styling across all devices.
+
+## Challenges and Learnings
+
+One of the primary engineering challenges was managing the indexing and search performance of thousands of Indonesian stock issuers (emitens) and extensive glossary words. Building a real-time, search-as-you-type experience required designing efficient backend queries and optimizing data delivery.
+
+By combining **PostgreSQL** with a strategic **Redis** caching layer, database query loads were reduced significantly. Cache invalidation strategies were set up to handle daily stock sector and metadata updates. Additionally, using **HeroUI** facilitated the creation of an aesthetic and highly interactive interface while ensuring that layout performance remained high, keeping page loads fast and responsive even on slower mobile connections.
+
+## Outcome
+
+Paham Saham has emerged as a premium, zero-cost knowledge database for retail investors in Indonesia. The implementation of modern caching and rendering techniques has resulted in highly performant page load speeds (with average response times dropping below 100ms for cached assets). The structured learning roadmaps have helped thousands of new investors build strong foundational knowledge before entering the financial markets.
