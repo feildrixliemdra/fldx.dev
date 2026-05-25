@@ -16,6 +16,14 @@ const nextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/jktgo',
+        destination: '/jktgo.html',
+      },
+    ]
+  },
 }
 
 export default withMDX(nextConfig)
