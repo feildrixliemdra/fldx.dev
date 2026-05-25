@@ -7,8 +7,6 @@ const getMediumPosts = async () => {
   const feed = await parser.parseURL('https://medium.com/feed/@feildrixliemdra')
 
   return feed.items.map((item) => {
-    console.log('title: ', item.title)
-
     const content = item['content:encoded'] || item.content || '' // HTML content
     const thumbnailMatch = content.match(/<img.*?src="(.*?)"/) // Match the first image tag
     const thumbnail = thumbnailMatch ? thumbnailMatch[1] : null

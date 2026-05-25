@@ -74,8 +74,8 @@ export default async function Blog() {
         {blog.title}
       </Heading>
       <Column fillWidth flex={1}>
-        <Posts posts={posts} range={[1, 3]} thumbnail />
-        <Posts posts={posts} range={[4]} columns='2' />
+        <Posts posts={posts} range={[1, 5]} thumbnail />
+        <Posts posts={posts} range={[6]} columns='2' />
       </Column>
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
